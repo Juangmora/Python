@@ -8,8 +8,7 @@ Prints all the results on the screen, ensuring the output is straightforward
 and user-friendly.
 '''
 
-print("What is your age?")
-age = int(input()) # Enter your age here
+age = int(input("What is your age?  ")) # Enter your age here
 
 if age > 21: # Is older then age specified reply
     print("You are old enough to drive.")
