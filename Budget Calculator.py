@@ -5,58 +5,61 @@ The program will then calculate and display the percentage of the total budget e
 '''
 # This program is to help create a simple budget
 
-print("What is your monthly net income?")
-net_income = input() # Here is where you define your net income
-print("I bring in " + net_income, "a month.")
-total_budget = 4500.00 # Variable that stores your net income 
+net_income = float(input("What is your monthly net income?" " ")) # Here is where you define your net income
+print("I bring in ",  net_income, "a month.")
+total_budget = net_income # Variable that stores your net income 
 print("Let's get some info about your monthly expenses.")
-print("How much do you spend on housing every month?")
-Housing = input() # Defines housing cost (mortgage/rent)
-print("I pay " + Housing, "a month.")
-Housing = 1300.00 # Variable that stores your housing cost
-print("How much do you spend on utilities?")
-Utilities = input() # Defines utility cost
-print("I pay " + Utilities)
-Utilities = 350.00 # Variable that stores your utility cost
-print("How much do you spend on transportation?")
-Transportation = input() # Defines transportation cost (gas)
-print("I spend about " + Transportation, "in gas a month.")
-Transportation = 200.00 # Variable that stores your transportation cost
-print("Do you have any medical copays?")
-Medical = input() # Definies medical expenses per month (copays)
-print("Yes i pay " + Medical, "per month.")
-Medical = 35.00 # Variable that stores your medical copay cost
-print("How much do you spend on clothing a month?", "I hear you like to shop.")
-Clothing = input() # Defines money spent on clothes
-print("I tend to spend " + Clothing, "a month.", "indeed I love to shop!")
-Clothing = 200.00 # Variable that stores your money spent on clothing
-print("How about Personal Care products?", "How much does that cost you a month?")
-Personal_Care = input() # Defines personal care spending (shampoo, body wash, soap)
-print("That usually cost me " + Personal_Care)
-Personal_Care = 80.00 # Variable that stores your money spent on personal care products
-print("ok last question. ", "How much debt do have to pay a month?")
-Debt = input() # Defines total debt owed at the end of the month (car not, credit card debt)
-print("Yikes!! ", "That cost me " + Debt, "a month.")
-Debt = 1050.00 # Variable that stores your total debt cost 
+
+housing = float(input("How much do you spend on housing every month?" " ")) # Defines housing cost (mortgage/rent)
+print("I pay ", housing, "a month.")
+mortgage_rent = housing # Variable that stores your housing cost
+
+utilities = float(input("How much do you spend on utilities?" " ")) # Defines utility cost
+print("I pay ", utilities)
+bills = utilities # Variable that stores your utility cost
+
+transportation = float(input("How much do you spend on transportation?" " ")) # Defines transportation cost (gas)
+print("I spend about ", transportation, "in gas a month.")
+gas = transportation # Variable that stores your transportation cost
+
+medical = float(input("Do you have any medical copays?" " ")) # Definies medical expenses per month (copays)
+print("Yes i pay ", medical, "per month.")
+health = medical # Variable that stores your medical copay cost
+
+clothing = float(input("How much do you spend on clothing a month?" " ")) # Defines money spent on clothes
+print("I tend to spend ", clothing, "a month.", "indeed I love to shop!")
+apparel = clothing # Variable that stores your money spent on clothing
+
+personal_care = float(input("How about personal care products?" " ")) # Defines personal care spending (shampoo, body wash, soap)
+print("That usually cost me ", personal_care)
+self_care = personal_care # Variable that stores your money spent on personal care products
+
+debt = float(input("ok last question, how much debt do have to pay a month?" " ")) # Defines total debt owed at the end of the month (car not, credit card debt)
+print("Yikes!! ", "That cost me ", debt, "a month.")
+liability = debt # Variable that stores your total debt cost
+
 print("OK let's add everything up!")
-Monthly_Spending = Housing + Utilities + Transportation + Medical + Clothing + Personal_Care + Debt # Defines total spent in a month
-Monthly_Spending = 3215.0 # Variable that stores your total spending for the month
-print("Your total spending for the month comes out to", Monthly_Spending)
+monthly_spending = mortgage_rent + bills + gas + health + apparel + self_care + liability # Defines total spent in a month
+monthly_expenses = monthly_spending # Variable that stores your total spending for the month
+print("Your total spending for the month comes out to", monthly_expenses)
+
 # equation used to convert to % percentage = (category / total_budget) * 100
-percentage = (Housing / total_budget) * 100 # Converts housing cost into %
-print(f"{Housing} is {percentage:.2f}% of {total_budget}")
-percentage = (Utilities / total_budget) * 100 # Converts utilities cost to %
-print(f"{Utilities} is {percentage:.2f}% of {total_budget}")
-percentage = (Transportation / total_budget) * 100 # Converts transportation cost to %
-print(f"{Transportation} is {percentage:.2f}% of {total_budget}")
-percentage = (Medical / total_budget) * 100 # Converts medical co-pays to %
-print(f"{Medical} is {percentage:.2f}% of {total_budget}")
-percentage = (Clothing / total_budget) * 100 # Converts clothing cost to %
-print(f"{Clothing} is {percentage:.2f}% of {total_budget}")
-percentage = (Personal_Care / total_budget) * 100 # Converts personal care cost to %
-print(f"{Personal_Care} is {percentage:.2f}% of {total_budget}")
-percentage = (Debt / total_budget) * 100 # Converts total debt to %
-print(f"{Debt} is {percentage:.2f}% of {total_budget}")
-percentage = (Monthly_Spending / total_budget) * 100 # Converts total monthly spending to %
-print(f"{Monthly_Spending} is {percentage:.2f}% of {total_budget}")
-print("Looks like you spend 71.50% of the money you bring in each month.")
+percentage = (mortgage_rent / total_budget) * 100 # Converts housing cost into %
+print(f"{mortgage_rent} is {percentage:.2f}% of {total_budget}")
+percentage = (bills / total_budget) * 100 # Converts utilities cost to %
+print(f"{bills} is {percentage:.2f}% of {total_budget}")
+percentage = (gas / total_budget) * 100 # Converts transportation cost to %
+print(f"{gas} is {percentage:.2f}% of {total_budget}")
+percentage = (health / total_budget) * 100 # Converts medical co-pays to %
+print(f"{health} is {percentage:.2f}% of {total_budget}")
+percentage = (apparel / total_budget) * 100 # Converts clothing cost to %
+print(f"{apparel} is {percentage:.2f}% of {total_budget}")
+percentage = (self_care / total_budget) * 100 # Converts personal care cost to %
+print(f"{self_care} is {percentage:.2f}% of {total_budget}")
+percentage = (liability / total_budget) * 100 # Converts total debt to %
+print(f"{liability} is {percentage:.2f}% of {total_budget}")
+percentage = (monthly_expenses / total_budget) * 100 # Converts total monthly spending to %
+print(f"{monthly_expenses} is {percentage:.2f}% of {total_budget}")
+print("Looks like you spend", percentage, "of the money you bring in each month.")
+leftover = total_budget - monthly_expenses
+print("You have", leftover, "left over after all your expenses are paid.")
